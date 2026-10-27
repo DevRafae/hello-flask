@@ -8,7 +8,7 @@ def home():
 
 @app.route("/api/pegadados")
 def api_hello():
-	return jsonify({"mensagem": "Olá Flask 2.0! Recebi a requisicao, para envio dos dados,"
+	return jsonify({"mensagem": "Olá Flask 2.0! Recebi a requisicao, para envio dos dados.Arrasamos novamente 😘"
 })
 
 
