@@ -1,0 +1,27 @@
+@startuml
+title OBJETIVO: Buscar dados
+
+actor usuario as "Usuário"
+boundary browser as "browser"
+control flask as "Flask"
+
+usuario -> browser : acessa
+activate browser
+activate flask
+browser -> flask : HTTP GET /
+flask --> browser : HTML
+browser --> usuario : exibe a página
+
+== Interação local no navegador ==
+
+usuario -> browser : clica no botão
+browser -> flask : HTTP GET /api/hello
+
+flask --> browser : JSON
+deactivate flask
+
+browser -> browser : textContent(dado)
+browser --> usuario : exibe a mensagem atualizada
+deactivate browser
+
+@enduml

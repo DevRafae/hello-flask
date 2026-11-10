@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Hello Flask 3.1</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<h1>Hello World 3.1</h1>
+
+	<input type="text" id="nome" placeholder="Digite seu nome aqui">
+	<input type="text" id="idade" placeholder="Digite a sua idade aqui">
+    <button id="botao3">Botão 3.1</button> 
+    <span id="mensagem"></span>
+
+	<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
