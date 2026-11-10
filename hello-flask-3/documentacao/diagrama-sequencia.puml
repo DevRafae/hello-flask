@@ -1,5 +1,5 @@
 @startuml
-title OBJETIVO: Buscar dados
+title OBJETIVO: Enviar e buscar dados (hello flask 3)
 
 actor usuario as "Usuário"
 boundary browser as "browser"
@@ -15,13 +15,14 @@ browser --> usuario : exibe a página
 == Interação local no navegador ==
 
 usuario -> browser : clica no botão
-browser -> flask : HTTP GET /api/hello
+browser -> flask : HTTP POST /api/post-hello (JSON)
 
-flask --> browser : JSON
+flask --> browser : mensagem (JSON)
 deactivate flask
 
-browser -> browser : textContent(dado)
-browser --> usuario : exibe a mensagem atualizada
+browser -> browser : textContent(mensagem)
+browser --> usuario : pagina atualizada
 deactivate browser
 
 @enduml
+
